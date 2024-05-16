@@ -4,18 +4,18 @@ import java.util.Scanner;
 public class ejemplo2 {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner texto = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int n=t.nextInt();
+        int numero=texto.nextInt();
         
-        asen(n,1);
+        recursivo(numero,1);
         System.out.println("regreso main");
     }
-    static void asen(int n,int i){
-        if(i<=n){
+    static void recursivo(int number,int i){
+        if(i<=number){
             System.out.println(i+" ");
-            asen(n,i+1);
+            recursivo(number,i+1);
             
         }
     }

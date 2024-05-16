@@ -7,14 +7,14 @@ public class eje4 {
     public static void main(String[] args) throws IOException {
         
         System.out.println("ingrese una palbra con punto");
-        ca();
+        recursivo();
         System.out.println("regreso a main");
     }
-    static void ca() throws IOException{
-        char ch = (char)System.in.read();
-        if(ch!='.'){
-            System.out.println(ch);
-            ca();
+    static void recursivo() throws IOException{
+        char character = (char)System.in.read();
+        if(character!='.'){
+            System.out.println(character);
+            recursivo();
         }
     }
 }

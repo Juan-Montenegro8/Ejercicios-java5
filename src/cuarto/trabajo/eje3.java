@@ -4,18 +4,18 @@ import java.util.Scanner;
 public class eje3 {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner texto = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int n=t.nextInt();
+        int numero=texto.nextInt();
         
-        asen(n);
+        recursivo(numero);
         System.out.println("regreso main");
     }
-    static void asen(int n){
-        if(1<n)
-            asen(n-1);
-        System.out.println(n+" ");
+    static void recursivo(int number){
+        if(1<number)
+            recursivo(number-1);
+        System.out.println(number+" ");
         
     }
     

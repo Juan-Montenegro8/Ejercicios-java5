@@ -16,18 +16,18 @@ public class ejeejeje {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner texto = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        double n=t.nextDouble();
+        double numero=texto.nextDouble();
         
-        double cont=1;
-        for (double i=1;i<=n;i++){
+        double conadort=1;
+        for (double i=1;i<=numero;i++){
 
-            cont=(1/i)+cont;
+            conadort=(1/i)+conadort;
         }   
 
-        System.out.println(cont);
+        System.out.println(conadort);
     }
     
 }

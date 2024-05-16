@@ -8,15 +8,15 @@ public class eje5 {
     public static void main(String[] args) throws IOException {
         
         System.out.println("ingrese una palbra con punto");
-        ca();
+        recursivo();
         System.out.println("regreso a main");
     }
-    static void ca() throws IOException{
-        char ch = (char)System.in.read();
-        if(ch!='.'){
-            ca();
+    static void recursivo() throws IOException{
+        char character = (char)System.in.read();
+        if(character!='.'){
+            recursivo();
         }
-        System.out.println(ch);
+        System.out.println(character);
     
     }
     
