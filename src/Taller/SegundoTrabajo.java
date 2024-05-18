@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class SegundoTrabajo {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner texto = new Scanner(System.in);
         
         System.out.println("ingrese limite");
-        long n=t.nextLong();
-        System.out.println("el sumatoria de "+n+" es: "+su(n));
+        long numero=texto.nextLong();
+        System.out.println("el sumatoria de "+numero+" es: "+sumatoria(numero));
     }
-    static long su(long n){
-        if(n==0){
+    static long sumatoria(long number){
+        if(number==0){
             return 0;
         }else{
-            return su(n-1)+n;
+            return sumatoria(number-1)+number;
         }
     }
         

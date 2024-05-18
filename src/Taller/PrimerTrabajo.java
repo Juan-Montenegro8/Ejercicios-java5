@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class PrimerTrabajo {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner texto = new Scanner(System.in);
         
         System.out.println("ingrese limite");
-        long n=t.nextLong();
-        System.out.println("el factorial de "+n+" es: "+fa(n));
+        long numero=texto.nextLong();
+        System.out.println("el factorial de "+numero+" es: "+factorial(numero));
     }
-    static long fa(long n){
-        if(n==0){
+    static long factorial(long number){
+        if(number==0){
             return 1;
         }else{
-            return fa(n-1)*n;
+            return factorial(number-1)*number;
         }
     }
 }
