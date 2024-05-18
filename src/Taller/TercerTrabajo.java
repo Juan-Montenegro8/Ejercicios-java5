@@ -5,21 +5,21 @@ import java.util.Scanner;
 public class TercerTrabajo {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner textoScanner = new Scanner(System.in);
         
         System.out.println("ingrese limite");
-        double n=t.nextDouble();
-        System.out.println("la suma es: "+suma(n));
+        double numero=textoScanner.nextDouble();
+        System.out.println("la suma es: "+suma(numero));
     }
-    static double suma(double n){
+    static double suma(double number){
         
-        double sum;
-        if (n==0) {
+        double contenedor;
+        if (number==0) {
             return 0;
         }else{
-            sum =(double)1/n + suma(n-1);
+            contenedor =(double)1/number + suma(number-1);
         }
-        return sum;
+        return contenedor;
     }
     
 }
