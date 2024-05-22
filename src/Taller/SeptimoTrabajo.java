@@ -5,20 +5,20 @@ import java.util.Scanner;
 public class SeptimoTrabajo {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner textoScanner = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int n=t.nextInt();
+        int numero=textoScanner.nextInt();
         System.out.println("exponencial");
-        int e=t.nextInt();
+        int exponencial=textoScanner.nextInt();
         
-        System.out.println("resultado es: "+ex(n,e));
+        System.out.println("resultado es: "+Exponencial(numero,exponencial));
     }
-    public static int ex(int n, int e){
-        if (e==0) {
+    public static int Exponencial(int number, int exponen){
+        if (exponen==0) {
             return 1;
         }else{
-            return n * ex(n, e-1);
+            return number * Exponencial(number, exponen-1);
         }
     }
 }
