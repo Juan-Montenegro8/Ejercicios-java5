@@ -5,19 +5,19 @@ import java.util.Scanner;
 public class SextoTrabajo {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner texto = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int n=t.nextInt();
+        int numero=texto.nextInt();
         
-        System.out.println("Sumatoria: "+su(n));
+        System.out.println("Sumatoria: "+Sumatoria(numero));
     }
     
-    public static int su(int n){
-        if (10>n) {
-            return n;
+    public static int Sumatoria(int number){
+        if (10>number) {
+            return number;
         }else{
-            return su(n/10)+ (n%10);
+            return Sumatoria(number/10)+ (number%10);
         }
     }
     
