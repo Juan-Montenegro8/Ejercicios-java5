@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class SeptimoTrabajo {
 
     public static void main(String[] args) {
-        Scanner textoScanner = new Scanner(System.in);
+        Scanner TextoScanner = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int numero=textoScanner.nextInt();
+        int numero=TextoScanner.nextInt();
         System.out.println("exponencial");
-        int exponencial=textoScanner.nextInt();
+        int exponencial=TextoScanner.nextInt();
         
         System.out.println("resultado es: "+Exponencial(numero,exponencial));
     }
