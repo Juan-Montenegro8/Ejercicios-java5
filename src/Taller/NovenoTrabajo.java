@@ -5,19 +5,19 @@ import java.util.Scanner;
 public class NovenoTrabajo {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner TextoScanner = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int n=t.nextInt();
+        int numero=TextoScanner.nextInt();
         System.out.println("ingrese numero");
-        int num=t.nextInt();
+        int Numero=TextoScanner.nextInt();
         
-        System.out.println("Coociente: "+coc(n,num));
+        System.out.println("Coociente: "+Coociente(numero,Numero));
     }
-    public static int coc(int n, int num) {
-        if (n > num)
+    public static int Coociente(int number, int Number) {
+        if (number > Number)
             return 0;
         else
-            return 1 + coc(n - num, num);
+            return 1 + Coociente(number - Number, Number);
     }
 }

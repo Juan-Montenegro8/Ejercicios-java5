@@ -5,20 +5,20 @@ import java.util.Scanner;
 public class OctavoTrabajo {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner TextoScanner = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int n=t.nextInt();
+        int numero=TextoScanner.nextInt();
         System.out.println("ingrese numero");
-        int num=t.nextInt();
+        int Numero=TextoScanner.nextInt();
         
-        System.out.println("MCD: "+max(n,num));
+        System.out.println("MCD: "+maximo(numero,Numero));
     }
-    public static int max(int n, int num){
-        if(num==0){
-            return n;
+    public static int maximo(int contenedor, int numero){
+        if(numero==0){
+            return contenedor;
         }else{
-            return max(num, n%num);
+            return maximo(numero, contenedor%numero);
         }
     }
 }
