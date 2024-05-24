@@ -5,20 +5,20 @@ import java.util.Scanner;
 public class DecimoTrabajo {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner Texto = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int n=t.nextInt();
+        int numero=Texto.nextInt();
         System.out.println("ingrese numero");
-        int num=t.nextInt();
+        int Numero=Texto.nextInt();
         
-        System.out.println("multiplicacion: "+mul(n,num));
+        System.out.println("multiplicacion: "+Multiplicacion(numero,Numero));
     }
-    public static int mul(int n, int num){
-        if (n==0 || num==0) {
+    public static int Multiplicacion(int number, int Number){
+        if (number==0 || Number==0) {
             return 0;
         }else{
-            return n + mul(n,num - 1); 
+            return number + Multiplicacion(number,Number - 1); 
         }
     }
 }
