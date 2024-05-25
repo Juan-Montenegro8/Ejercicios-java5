@@ -5,22 +5,22 @@ import java.util.Scanner;
 public class CatorceaboTrabajo {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner Texto = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int n=t.nextInt();
+        int numero=Texto.nextInt();
         System.out.println("ingrese numero");
-        int n1=t.nextInt();
+        int Numero=Texto.nextInt();
         
-        ake(n, n1);
+        ake(numero, Numero);
     }
-    public static int ake (int n, int n1){
-        if (n==0) {
-            return n1+1;
+    public static int ake (int number, int Number){
+        if (number==0) {
+            return Number+1;
         }
-        if (n1==0){
-            return ake(n-1, 1);
+        if (Number==0){
+            return ake(number-1, 1);
         }
-        return ake(n-1, ake(n, n1-1));
+        return ake(number-1, ake(number, Number-1));
     }
 }

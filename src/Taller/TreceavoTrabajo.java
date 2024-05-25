@@ -5,22 +5,22 @@ import java.util.Scanner;
 public class TreceavoTrabajo {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner TextScanner  = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int n=t.nextInt();
+        int numero=TextScanner.nextInt();
         
-        fibo(n, 0, 0, 1);
+        fibonacci(numero, 0, 0, 1);
     }
-    public static void fibo(int n, int n1, int n2, int r){
-        if (n2+r>n) {
+    public static void fibonacci(int Number, int Number1, int Number2, int r){
+        if (Number2+r>Number) {
            
         }else{
-            n1 = n2;
-            n2 = r;
-            r = n1 + n2;
+            Number1 = Number2;
+            Number2 = r;
+            r = Number1 + Number2;
             System.out.println(r);
-            fibo(n, n1, n2, r);
+            fibonacci(Number, Number1, Number2, r);
         }
     }
 }
