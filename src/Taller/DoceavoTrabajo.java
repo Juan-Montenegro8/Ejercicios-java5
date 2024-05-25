@@ -5,43 +5,43 @@ import java.util.Scanner;
 public class DoceavoTrabajo {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner Texto = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int n=t.nextInt();
+        int numero=Texto.nextInt();
         System.out.println("ingrese numero");
-        int num=t.nextInt();
+        int Numero=Texto.nextInt();
         
-        int arr[][]=new int[n][num];
+        int array[][]=new int[numero][Numero];
         
         System.out.println("llenar arreglo");
         
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                arr[i][j]=t.nextInt();
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j]=Texto.nextInt();
             }
         }
         
         System.out.println("mostrar arreglo");
         
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < num; j++) {
-                System.out.println(arr[i][j]+" ");
+        for (int i = 0; i < numero; i++) {
+            for (int j = 0; j < Numero; j++) {
+                System.out.println(array[i][j]+" ");
             }
         }
         
-        System.out.println("multiplicacion: "+sum(arr,n-1,num-1));
+        System.out.println("multiplicacion: "+Multiplicacion(array,numero-1,Numero-1));
     }
-    public static int sum(int[][] arr, int n, int num){
-        if ((n == 0) && (num == 0)) {
-            return arr [n][num];
+    public static int Multiplicacion(int[][] array, int number, int Number){
+        if ((number == 0) && (Number == 0)) {
+            return array [number][Number];
         }else{
-            if (n>-1) {
-                num--;
-                if (num>=-1) {
-                    return arr[n][num+1]+sum(arr, n, num);
+            if (number>-1) {
+                Number--;
+                if (Number>=-1) {
+                    return array[number][Number+1]+Multiplicacion(array, number, Number);
                 }else{
-                    return sum(arr, n-1, 2);
+                    return Multiplicacion(array, number-1, 2);
                 }
             }else{
                 return 0;
