@@ -5,16 +5,15 @@ import java.util.Scanner;
 public class SegundoTrabajo {
 
     public static void main(String[] args) {
-        Scanner textoScanner = new Scanner(System.in);
+      
+        try (Scanner textoScanner = new Scanner(System.in);){
         
-        System.out.println("ingrese limite");
-        long numero=textoScanner.nextLong();
-        System.out.println("el sumatoria de "+numero+" es: "+sumatoria(numero));
-
-        try {
-            
+            System.out.println("ingrese limite");
+            long numero=textoScanner.nextLong();
+            System.out.println("el sumatoria de "+numero+" es: "+sumatoria(numero));
+        
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println("Ocurrio un error: "+e.getMessage());
         }
     }
     static long sumatoria(long number){
