@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class PrimerTrabajo {
 
     public static void main(String[] args) {
-        Scanner textoScanner = new Scanner(System.in);
-        try {
+        
+        try (Scanner textoScanner=new Scanner(System.in);) {
             System.out.println("ingrese limite");
             long numero=textoScanner.nextLong();
             System.out.println("el factorial de "+numero+" es: "+factorial(numero));
         } catch (Exception e) {
-            textoScanner.close();
+            System.out.println("Ocurrio un error: " + e.getMessage());
         }
     }
     static long factorial(long number){
