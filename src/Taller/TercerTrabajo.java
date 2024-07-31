@@ -5,11 +5,13 @@ import java.util.Scanner;
 public class TercerTrabajo {
 
     public static void main(String[] args) {
-        Scanner textoScanner = new Scanner(System.in);
-        
-        System.out.println("ingrese limite");
-        double numero=textoScanner.nextDouble();
-        System.out.println("la suma es: "+suma(numero));
+        try (Scanner textoScanner = new Scanner(System.in)){
+            System.out.println("ingrese limite");
+            double numero=textoScanner.nextDouble();
+            System.out.println("la suma es: "+suma(numero));
+        } catch (Exception e) {
+            System.out.println("Ocurrio un error: "+e.getMessage());
+        }
     }
     static double suma(double number){
         
