@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class SextoTrabajo {
 
     public static void main(String[] args) {
-        Scanner texto = new Scanner(System.in);
+        Scanner textoScanner = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int numero=texto.nextInt();
+        int numero=textoScanner.nextInt();
         
         System.out.println("Sumatoria: "+Sumatoria(numero));
     }
