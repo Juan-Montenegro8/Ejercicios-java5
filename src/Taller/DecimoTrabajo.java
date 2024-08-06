@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class DecimoTrabajo {
 
     public static void main(String[] args) {
-        Scanner Texto = new Scanner(System.in);
+        Scanner TextoScanner = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int numero=Texto.nextInt();
+        int numero=TextoScanner.nextInt();
         System.out.println("ingrese numero");
-        int Numero=Texto.nextInt();
+        int Numero=TextoScanner.nextInt();
         
         System.out.println("multiplicacion: "+Multiplicacion(numero,Numero));
     }
