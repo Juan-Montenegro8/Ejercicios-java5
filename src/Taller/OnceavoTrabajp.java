@@ -5,19 +5,22 @@ import java.util.Scanner;
 public class OnceavoTrabajp {
 
     public static void main(String[] args) {
-        Scanner TextoScanner = new Scanner(System.in);
         
-        System.out.println("ingrese numero");
-        int numero=TextoScanner.nextInt();
-        int array []= new int[numero];
+        try (Scanner TextoScanner = new Scanner(System.in)){
+            System.out.println("ingrese numero");
+            int numero=TextoScanner.nextInt();
+            int array []= new int[numero];
         
-        System.out.println("llenar arreglo");
+            System.out.println("llenar arreglo");
         
-        for (int i = 0; i < array.length; i++) {
-            array[i] =TextoScanner.nextInt();
+            for (int i = 0; i < array.length; i++) {
+                array[i] =TextoScanner.nextInt();
+            }
+        
+            System.out.println("suma: "+Suma(array,0));
+        } catch (Exception e) {
+            System.out.println("Ocurrio un error "+e.getMessage());
         }
-        
-        System.out.println("suma: "+Suma(array,0));
     }
     public static int Suma(int[] array, int i){
         int suma=0;
