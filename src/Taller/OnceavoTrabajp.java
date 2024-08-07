@@ -5,16 +5,16 @@ import java.util.Scanner;
 public class OnceavoTrabajp {
 
     public static void main(String[] args) {
-        Scanner Texto = new Scanner(System.in);
+        Scanner TextoScanner = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int numero=Texto.nextInt();
+        int numero=TextoScanner.nextInt();
         int array []= new int[numero];
         
         System.out.println("llenar arreglo");
         
         for (int i = 0; i < array.length; i++) {
-            array[i] =Texto.nextInt();
+            array[i] =TextoScanner.nextInt();
         }
         
         System.out.println("suma: "+Suma(array,0));
