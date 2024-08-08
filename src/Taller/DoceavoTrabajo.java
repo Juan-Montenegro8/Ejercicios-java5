@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class DoceavoTrabajo {
 
     public static void main(String[] args) {
-        Scanner Texto = new Scanner(System.in);
+        Scanner TextoScanner = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int numero=Texto.nextInt();
+        int numero=TextoScanner.nextInt();
         System.out.println("ingrese numero");
-        int Numero=Texto.nextInt();
+        int Numero=TextoScanner.nextInt();
         
         int array[][]=new int[numero][Numero];
         
@@ -18,7 +18,7 @@ public class DoceavoTrabajo {
         
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                array[i][j]=Texto.nextInt();
+                array[i][j]=TextoScanner.nextInt();
             }
         }
         
