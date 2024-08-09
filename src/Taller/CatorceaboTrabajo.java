@@ -5,14 +5,16 @@ import java.util.Scanner;
 public class CatorceaboTrabajo {
 
     public static void main(String[] args) {
-        Scanner Texto = new Scanner(System.in);
+        try (Scanner TextoScanner = new Scanner(System.in)){
+            System.out.println("ingrese numero");
+            int numero=TextoScanner.nextInt();
+            System.out.println("ingrese numero");
+            int Numero=TextoScanner.nextInt();
         
-        System.out.println("ingrese numero");
-        int numero=Texto.nextInt();
-        System.out.println("ingrese numero");
-        int Numero=Texto.nextInt();
-        
-        ake(numero, Numero);
+            ake(numero, Numero);    
+        } catch (Exception e) {
+            System.out.println("Ocurrio un error: "+e.getMessage());
+        }
     }
     public static int ake (int number, int Number){
         if (number==0) {
