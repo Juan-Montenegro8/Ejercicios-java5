@@ -5,12 +5,15 @@ import java.util.Scanner;
 public class TreceavoTrabajo {
 
     public static void main(String[] args) {
-        Scanner TextScanner  = new Scanner(System.in);
         
-        System.out.println("ingrese numero");
-        int numero=TextScanner.nextInt();
+        try (Scanner TextScanner  = new Scanner(System.in)){
+            System.out.println("ingrese numero");
+            int numero=TextScanner.nextInt();
         
-        fibonacci(numero, 0, 0, 1);
+            fibonacci(numero, 0, 0, 1);
+        } catch (Exception e) {
+            System.out.println("Ocurrio un error: "+e.getMessage());
+        }
     }
     public static void fibonacci(int Number, int Number1, int Number2, int r){
         if (Number2+r>Number) {
