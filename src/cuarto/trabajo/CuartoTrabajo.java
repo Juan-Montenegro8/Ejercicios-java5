@@ -5,13 +5,16 @@ import java.util.Scanner;
 public class CuartoTrabajo {
 
     public static void main(String[] args) {
-        Scanner textoScanner = new Scanner(System.in);
+        try (Scanner textoScanner = new Scanner(System.in)){
+
+            System.out.println("ingrese numero");
+            int numero=textoScanner.nextInt();
         
-        System.out.println("ingrese numero");
-        int numero=textoScanner.nextInt();
-        
-        recursivo(numero);
-        System.out.println("regreso main");
+            recursivo(numero);
+            System.out.println("regreso main");
+        } catch (Exception e) {
+            System.out.println("Ocurrio un error: "+e.getMessage());
+        }
     }
     static void recursivo(int number){
         if(number>0){
