@@ -16,10 +16,10 @@ public class ejeejeje {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner texto = new Scanner(System.in);
+        Scanner textoScanner = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        double numero=texto.nextDouble();
+        double numero=textoScanner.nextDouble();
         
         double conadort=1;
         for (double i=1;i<=numero;i++){
