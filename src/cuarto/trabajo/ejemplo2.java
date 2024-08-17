@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class ejemplo2 {
 
     public static void main(String[] args) {
-        Scanner texto = new Scanner(System.in);
+        Scanner textoScanner = new Scanner(System.in);
         
         System.out.println("ingrese numero");
-        int numero=texto.nextInt();
+        int numero=textoScanner.nextInt();
         
         recursivo(numero,1);
         System.out.println("regreso main");
